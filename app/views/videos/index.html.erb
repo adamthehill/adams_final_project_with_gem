@@ -1,0 +1,29 @@
+<center><%= image_tag "IngenuityPrep_horizontal.png" %></center>
+<center><h1>Welcome to the Video Playbook!</h1></center>
+<center><h3>A video library of effective practices in teaching<h3></center>
+<h1><%= link_to "Videos Home", videos_path %><h1> 
+<center><h3>Here are our tags</h3></center>
+<div id="tag_cloud">
+	<% tag_cloud Video.tag_counts, %w[s m l] do |tag, css_class| %>
+
+	<%= link_to tag.name, tag_path(tag.name), class: css_class %><%=" --- " %>
+	<% end %>
+	
+</div>
+
+<h2>Videos <% if params[:tag] %>
+	tagged with <span style="color: red"><%= @tag %>
+		<% else %>
+		<%= "in the Playbook" %>
+		<% end %>
+	</span> <h2>
+<ul>
+	<% @videos.each do |video| %>
+	<li><%= link_to video.video_title, video %></li>
+	<p>
+	Tags: <%= raw video.tag_list.map { |t| link_to t, tag_path(t)}.join(', ') %>
+	<% end %>
+<ul>
+
+<%= link_to "Add a new video", new_video_path %>
+

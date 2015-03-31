@@ -1,0 +1,18 @@
+<p>
+	<%= link_to "Playbook Home Page", videos_path %> / <%= @video.video_title %>
+<h1><%= @video.video_title %></h1>
+
+<center><p>
+<iframe src="http://player.vimeo.com/external/<%= @video.embed_url %>" width="640" height="390"></iframe>
+</p></center>
+
+Tags: <%= @video.tag_list %>
+
+<p>
+<%= link_to "Edit movie info", edit_video_path %>
+</p>
+<p>
+<%= form_for @video, :method => :delete do |f| %>
+  <%= f.submit 'Delete Video' %>
+<% end %>
+</p>

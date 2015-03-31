@@ -1,0 +1,20 @@
+<%= form_for @video do |f| %>
+
+<p>
+<p>
+<%= f.label :video_title %>
+<%= f.text_field :video_title %>
+</p>
+<p>
+<%= f.label :embed_url %>
+<%= f.text_field :embed_url %>
+</p>
+
+<p>
+<%= f.label :tag_list, "Add New Tags (separated by commas)" %>
+<%= f.text_field :tag_list %>
+</p>
+
+<%= f.submit %>
+
+<% end %>
