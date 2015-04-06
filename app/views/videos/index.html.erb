@@ -1,6 +1,9 @@
 <center><%= image_tag "IngenuityPrep_horizontal.png" %></center>
 <center><h1>Welcome to the Video Playbook!</h1></center>
-<center><h3>A video library of effective practices in teaching<h3></center>
+
+<center>><%= image_tag "Jennifer.jpg" %> <%= image_tag "Dee.jpg" %></center>
+
+<center><h3 style="font-size: 200%">A video library of effective practices in teaching<h3></center>
 <h1><%= link_to "Videos Home", videos_path %><h1> 
 <center><h3>Here are our tags</h3></center>
 <div id="tag_cloud">
@@ -12,7 +15,7 @@
 </div>
 
 <h2>Videos <% if params[:tag] %>
-	tagged with <span style="color: red"><%= @tag %>
+	tagged with <span style="color: yellow"><%= @tag %>
 		<% else %>
 		<%= "in the Playbook" %>
 		<% end %>

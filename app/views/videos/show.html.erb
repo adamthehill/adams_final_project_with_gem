@@ -6,8 +6,11 @@
 <iframe src="https://player.vimeo.com/external/<%= @video.embed_url %>" width="640" height="390"></iframe>
 </p></center>
 
-Tags: <%= @video.tag_list %>
 
+<center style="color: yellow">Tags: <%= @video.tag_list %></center>
+
+
+<h3>
 <p>
 <%= link_to "Edit movie info", edit_video_path %>
 </p>
@@ -16,3 +19,4 @@ Tags: <%= @video.tag_list %>
   <%= f.submit 'Delete Video' %>
 <% end %>
 </p>
+</h3>
