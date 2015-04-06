@@ -1,16 +1,16 @@
 <%= form_for @video do |f| %>
 
 <p>
-<p>
+<p style="color: yellow">
 <%= f.label :video_title %>
 <%= f.text_field :video_title %>
 </p>
-<p>
+<p style="color: yellow">
 <%= f.label :embed_url %>
 <%= f.text_field :embed_url %>
 </p>
 
-<p>
+<p style="color: yellow">
 <%= f.label :tag_list, "Add New Tags (separated by commas)" %>
 <%= f.text_field :tag_list %>
 </p>
